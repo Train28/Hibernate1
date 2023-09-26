@@ -18,7 +18,6 @@ public class PersonaDAO {
     private EntityManagerFactory emf;
 
     public PersonaDAO() {
-
         emf = Persistence.createEntityManagerFactory("HibernatePU");
         em = emf.createEntityManager();
     }
@@ -37,7 +36,6 @@ public class PersonaDAO {
         em.getTransaction().begin();
         em.persist(person);
         em.getTransaction().commit();
-
     }
 
     public Persona buscarPersona(int id) {

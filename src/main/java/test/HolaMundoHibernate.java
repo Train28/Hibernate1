@@ -14,25 +14,25 @@ public class HolaMundoHibernate {
         int id, var;
         String name, apellido, email, telefono;
 
-        System.out.println("Ingresar la accion a realizar");
-        System.out.println("1. Insertar 2. Buscar 3. Listar");
+        System.out.println("wHAT ACTION U WANT TO DO");
+        System.out.println("1. INSERT 2. SEARCH BY ID 3. SHOW ALL PEOPLE");
 
         var = sc.nextInt();
         switch (var) {
             case 1:
-                System.out.println("ingresar id");
+                System.out.println("insert id");
                 id = sc.nextInt();
 
-                System.out.println("ingresar nombre");
+                System.out.println("insert name");
                 name = sc.next();
 
-                System.out.println("ingresar apellido");
+                System.out.println("insert last name");
                 apellido = sc.next();
 
-                System.out.println("ingresar email");
+                System.out.println("insert email");
                 email = sc.next();
 
-                System.out.println("ingresar telefono");
+                System.out.println("insert phone number");
                 telefono = sc.next();
                 per.setIdPersona(id);
                 per.setNombre(name);
@@ -43,16 +43,13 @@ public class HolaMundoHibernate {
                 break;
 
             case 2:
-                System.out.println("ingresar id");
+                System.out.println("insert id");
                 id = sc.nextInt();
-                System.out.println(p.buscarPersona(id));
-                
-                
+                System.out.println(p.buscarPersona(id));                               
                 break;
                 
                 case 3:
                     p.listar();
-
                 break;
 
             default:
