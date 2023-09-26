@@ -27,27 +27,20 @@ public class PersonaDAO {
         String hql = "SELECT p FROM Persona p";
         Query query = em.createQuery(hql);
         List<Persona> personas = query.getResultList();
-        
+
         for (Persona persona : personas) {
             System.out.println("Persona" + persona);
         }
     }
 
-    public void insertar(Persona person){
+    public void insertar(Persona person) {
         em.getTransaction().begin();
         em.persist(person);
         em.getTransaction().commit();
-        
+
     }
-    
-//    public Persona buscarPersona(Persona per){
-//        return em.find(Persona.class,0);
-//        
-//        }
-//
 
-
-    public Persona buscarPersona(int id){
-       return em.find(Persona.class, id);
+    public Persona buscarPersona(int id) {
+        return em.find(Persona.class, id);
     }
 }
